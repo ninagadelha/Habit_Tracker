@@ -1,0 +1,57 @@
+/* Global font and background */
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: 'Creepster';
+  background-color: #000000; /* full page black background */
+}
+
+/* Main page wrapper */
+.homepage {
+  width: 100%;
+  min-height: 100vh;
+  padding: 20px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: transparent;
+}
+
+/* Title at top center */
+.homepage h1 {
+  margin-top: 0;
+  margin-bottom: 40px;
+  color: #ff4800;
+  text-align: center;
+}
+
+/* Cards rows */
+.cards-row {
+  display: flex;
+  justify-content: center;
+  gap: 50px;        /* horizontal spacing between cards */
+  margin-bottom: 60px; /* vertical spacing between rows */
+}
+
+/* Individual cards */
+.day-card {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  padding: 20px;
+  width: 150px;
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.2s, box-shadow 0.3s; 
+}
+
+/* Orange glow on hover */
+.day-card:hover {
+  box-shadow: 0 0 5px 10px #ff4800; 
+  transform: scale(1.05);          
+}
+

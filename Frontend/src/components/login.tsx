@@ -1,12 +1,14 @@
 import React, { useState } from "react";
+import { useNavigate } from 'react-router-dom';
 import "./Login.css";
 
 function Login() {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
     const [error, setError] = useState('');
+    const navigate = useNavigate();
 
-    const handleSubmit = async (e: any) => {
+    const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         setError('');
 
@@ -20,7 +22,7 @@ function Login() {
             const data = await res.json();
 
             if(res.ok){
-                alert('Login successful!');
+                navigate('/home');
             }
             else{
                 setError(data.message || 'Invalid credentials')
